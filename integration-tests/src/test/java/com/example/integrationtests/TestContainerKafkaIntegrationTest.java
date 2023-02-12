@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Import;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.*;
 import org.springframework.test.annotation.DirtiesContext;
@@ -27,10 +28,10 @@ import static org.hamcrest.Matchers.containsString;
 
 
 @RunWith(SpringRunner.class)
-//@Import(KafkaIntegrationTest.KafkaTestContainersConfiguration.class)
+//@Import(TestContainerKafkaIntegrationTest.KafkaTestContainersConfiguration.class)
 @SpringBootTest(classes = IntegrationTestsApplication.class)
 @DirtiesContext
-public class KafkaIntegrationTest {
+public class TestContainerKafkaIntegrationTest {
 
     @ClassRule
     public static KafkaContainer kafka = new KafkaContainer(DockerImageName.parse("confluentinc/cp-kafka:5.4.3"));

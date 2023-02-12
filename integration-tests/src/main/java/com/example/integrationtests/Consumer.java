@@ -11,7 +11,7 @@ public class Consumer {
 
 
 //    @KafkaListener(topics = {"test"}, groupId = "test-consumer-group")
-    @KafkaListener(topics = {"embedded-test-topic"}, groupId = "test-consumer-group")
+    @KafkaListener(topics = "${test.topic}", groupId = "test-consumer-group")
     public void consume(ConsumerRecord<String, String> record){
         System.out.println("Message | key : " + record.key() + " value: " + record.value());
         lastConsumedMessage = record.toString();

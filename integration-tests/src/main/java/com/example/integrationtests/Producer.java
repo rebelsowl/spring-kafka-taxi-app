@@ -19,18 +19,17 @@ public class Producer {
         this.kafkaTemplate = kafkaTemplate;
     }
 
+    /*
     @Scheduled(fixedRate = 1000)
     @Async
     public void produce(){
-//        kafkaTemplate.send("test", "Message " + Math.random() + "-" + i);
+        kafkaTemplate.send("test", "Message " + Math.random() + "-" + i);
         i ++;
     }
-
+    */
 
     public void send(String topic, String payload){
         kafkaTemplate.send(topic, payload);
     }
-
-
 
 }

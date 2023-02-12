@@ -18,19 +18,14 @@ import org.springframework.kafka.support.serializer.JsonSerializer;
 import java.util.HashMap;
 import java.util.Map;
 
-
 @Configuration
 public class KafkaConfig {
-
-
 
     //  TOPIC CONFIGS
     @Bean
     public NewTopic hobbit(){
         return TopicBuilder.name("test").partitions(3).replicas(2).build();
     }
-
-
 
     // PRODUCER CONFIGS
     @Bean
