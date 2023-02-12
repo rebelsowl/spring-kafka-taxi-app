@@ -25,4 +25,12 @@ public class Producer {
 //        kafkaTemplate.send("test", "Message " + Math.random() + "-" + i);
         i ++;
     }
+
+
+    public void send(String topic, String payload){
+        kafkaTemplate.send(topic, payload);
+    }
+
+
+
 }
