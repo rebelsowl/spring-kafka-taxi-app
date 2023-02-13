@@ -1,1 +1,9 @@
-
+spring:
+  kafka:
+    properties:
+      bootstrap.servers: localhost:9092,localhost:9093,localhost:9094
+      sasl:
+        mechanism: PLAIN
+    streams:
+      replication-factor: 2
+      application-id: taxi-app-streams
