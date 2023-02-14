@@ -4,4 +4,4 @@ spring:
       auto-offset-reset: earliest
       group-id: int-test
 test:
-  topic: test-topic
+  topic: integration-test-topic

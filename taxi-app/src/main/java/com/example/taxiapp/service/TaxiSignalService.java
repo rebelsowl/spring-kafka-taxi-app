@@ -16,9 +16,7 @@ public class TaxiSignalService {
         if (!isValidVehicleId(taxiSignal.getVehicleId())) {
             throw new IllegalArgumentException("Invalid vehicle ID");
         }
-
         kafkaProducer.sendTaxiSignal(taxiSignal.getVehicleId(), taxiSignal.getCoordinates());
-
     }
 
     private boolean isValidVehicleId(int vehicleId) {
@@ -26,6 +24,5 @@ public class TaxiSignalService {
             return false;
         return true;
     }
-
 
 }
