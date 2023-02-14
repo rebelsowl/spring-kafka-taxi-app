@@ -20,10 +20,8 @@ public class DistanceCache {
         distanceCache.put(locationId, totalDistance);
     }
 
-
     public Double getTotalDistance(int locationId) {
         return distanceCache.getIfPresent(locationId);
     }
-
 
 }

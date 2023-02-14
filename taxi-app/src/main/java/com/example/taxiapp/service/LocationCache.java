@@ -22,10 +22,8 @@ public class LocationCache {
         locationCache.put(locationId, coordinates);
     }
 
-
     public Point getLocationData(int locationId) {
         return locationCache.getIfPresent(locationId);
     }
-
 
 }

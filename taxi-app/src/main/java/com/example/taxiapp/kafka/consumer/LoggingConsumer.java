@@ -13,7 +13,7 @@ public class LoggingConsumer {
 
     @KafkaListener(topics = KafkaConfig.OUTPUT_TOPIC_NAME , groupId = "taxi-app-output-consumer")
     public void consume(ConsumerRecord<String, Integer> record) {
-        logger.info("output topic : key -> " + record.key() + " valeu -> " + record.value());
+        logger.info("output topic : key -> " + record.key() + " value -> " + record.value());
     }
 
 }

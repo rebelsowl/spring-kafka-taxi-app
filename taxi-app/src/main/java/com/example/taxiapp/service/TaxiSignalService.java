@@ -12,6 +12,7 @@ public class TaxiSignalService {
         this.kafkaProducer = kafkaProducer;
     }
 
+
     public void addTaxiSignal(TaxiSignal taxiSignal) throws IllegalArgumentException {
         if (!isValidVehicleId(taxiSignal.getVehicleId())) {
             throw new IllegalArgumentException("Invalid vehicle ID");
@@ -20,9 +21,7 @@ public class TaxiSignalService {
     }
 
     private boolean isValidVehicleId(int vehicleId) {
-        if (vehicleId < 0)
-            return false;
-        return true;
+        return vehicleId >= 0;
     }
 
 }
