@@ -18,7 +18,7 @@ public class KafkaConfig {
 
     //  TOPIC CONFIGS
     @Bean
-    public NewTopic hobbit() {
+    public NewTopic testTopic() {
         return TopicBuilder.name("test").partitions(3).replicas(2).build();
     }
 
